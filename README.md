@@ -15,7 +15,7 @@
 1. 克隆项目
 
 ```bash
-git clone https://github.com/yourusername/WeatherBuddy.git
+git clone https://github.com/HanBBQovo/WeatherBuddy.git
 cd WeatherBuddy
 ```
 
