@@ -1,0 +1,39 @@
+{
+  "name": "WeatherBuddy",
+  "version": "1.0.0",
+  "description": "全国多区域天气信息获取与推送服务",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "node index.js --test",
+    "dev": "nodemon index.js",
+    "message-server": "node messageHandler.js",
+    "start-all": "npm run start & npm run message-server",
+    "test:push": "node tools/testPush.js",
+    "lint": "eslint --fix .",
+    "format": "prettier --write '**/*.js'"
+  },
+  "keywords": [
+    "weather",
+    "wxpusher",
+    "notification"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.8.4",
+    "body-parser": "^1.20.3",
+    "csv-parse": "^5.6.0",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "jose": "^4.15.9",
+    "jsonwebtoken": "^9.0.2",
+    "node-schedule": "^2.1.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "nodemon": "^3.0.2",
+    "prettier": "^3.2.5"
+  }
+}
