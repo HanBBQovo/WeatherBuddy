@@ -110,6 +110,22 @@ function getTomorrowWeather(weatherData) {
 }
 
 /**
+ * 获取随机底部图片
+ * @returns {String} 随机底部图片的URL
+ */
+function getRandomBottomImage() {
+  const images = [
+    "https://pic1.imgdb.cn/item/67e0bbaf88c538a9b5c56204.gif",
+    "https://pic1.imgdb.cn/item/67eca2a80ba3d5a1d7e9b978.gif",
+    "https://pic1.imgdb.cn/item/67eca2a80ba3d5a1d7e9b979.gif",
+    "https://pic1.imgdb.cn/item/67eca4710ba3d5a1d7e9bf32.gif",
+    "https://pic1.imgdb.cn/item/67eca4a60ba3d5a1d7e9bfa1.gif",
+  ];
+
+  return images[Math.floor(Math.random() * images.length)];
+}
+
+/**
  * 格式化天气数据，返回HTML格式的内容
  * @param {Object} weatherData 和风天气API返回的数据
  * @param {String} clothingSuggestion 可选的穿衣建议
@@ -496,7 +512,7 @@ async function formatWeatherData(weatherData, clothingSuggestion = null) {
   html += `
     </div>
     <div>
-      <img src="https://pic1.imgdb.cn/item/67e0bbaf88c538a9b5c56204.gif" alt="" style="display:block; width:100%; max-width:500px; margin:0 auto;" />
+      <img src="${getRandomBottomImage()}" alt="" style="display:block; width:100%; max-width:500px; margin:0 auto;" />
     </div>
     <div class="footer">
       祝您生活愉快 ⭐
